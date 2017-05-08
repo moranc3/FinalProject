@@ -39,7 +39,7 @@ namespace AssemblyCSharp
 
 		IEnumerator Stun(Enemy e)
 		{
-			Debug.Log
+			Debug.Log ("animator");
 			var renderer = e.GetComponent<SpriteRenderer> ();
 			var animator = e.GetComponent<Animator> ();
 
@@ -47,7 +47,7 @@ namespace AssemblyCSharp
 			if (animator != null) {
 				animator.enabled = false;
 			}
-			for (int i =0; 1 <8; i++) {
+			for (int i =0; i <8; i++) {
 				renderer.color = new Color (1, 1, 1, 1- (i* .1f));
 				yield return new WaitForSeconds (.4f);
 			}
@@ -55,14 +55,15 @@ namespace AssemblyCSharp
 			yield return new WaitForSeconds (5);
 		
 
-			for (int i =0; 1 <11; i++) {
+			for (int i =0; i <11; i++) {
 				renderer.color = new Color (1, 1, 1, i *.1f);
 				yield return new WaitForSeconds (.4f);
 			}
 
 			if (animator != null) {
 				animator.enabled = true;
-			}		e.enabled = true;
+			}
+			e.enabled = true;
 	
 	}
 }

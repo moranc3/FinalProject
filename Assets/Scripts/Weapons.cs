@@ -27,10 +27,11 @@ public class Weapons : MonoBehaviour {
 	{
 		Debug.Log ("Got picked up");
 		transform.parent = player.transform;
-		transform.localScale = new Vector3 (.02f, .02f);
+		transform.localScale = new Vector3 (.7f, .7f);
 		transform.localPosition = new Vector3 (.2f, .2f);
 		rigidbody2D.isKinematic = true;
 		rigidbody2D.velocity = new Vector2 ();
 		collider2D.enabled = false;
+		player.AddWeapon (this);
 	}
 }
