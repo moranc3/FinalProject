@@ -10,7 +10,7 @@ public class Bazooka : Weapons {
 	{
 		var rocket = Instantiate (rocketPrefab);
 		rocket.transform.position = this.transform.position;
-		rocket.GetComponent<Rigidbody2D> ().velocity = new Vector2 (10, 0);
+		rocket.GetComponent<Rigidbody2D> ().velocity = new Vector2 (10, 0-.5f);
 		base.Attack ();
 	}
 
