@@ -2,12 +2,13 @@
 using UnityEngine.UI;
 
 public class GM : MonoBehaviour {
-    private int _Lives = 3;
+	public int _Lives = 3;
     private int _Points;
 
     public Text livesValue;
     public Text pointsValue;
     public GameObject gameOverSign;
+	public GameObject youWinSign;
 
     public void SetLives(int newValue) {
         _Lives = newValue;
@@ -26,6 +27,10 @@ public class GM : MonoBehaviour {
     public void SetPoints(int newValue) {
         _Points = newValue;
         pointsValue.text = _Points.ToString();
+
+		if (_Points == 25) {
+			youWinSign.SetActive (true);
+		}
     }
     public int GetPoints() {
         return _Points;

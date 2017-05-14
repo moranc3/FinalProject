@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy3 : MonoBehaviour {
+public class Enemy3 : Enemy {
 
 	Player player;
 	public bool changeSpeed = false;

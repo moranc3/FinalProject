@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireballPower : MonoBehaviour {
+public class FireballPower : Throwable {
 
 	public GameObject projectile;
 	public Vector2 velocity;

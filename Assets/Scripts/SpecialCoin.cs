@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class SpecialCoin : MonoBehaviour {
 
-	public GameObject youWinSign;
-
-	public void OnCollisionEnter2D (Collision2D coll)
+	private void OnTriggerEnter2D(Collider2D coll)
 	{
-		var player = coll.gameObject.GetComponent<Player> ();
-		if (player != null) 
-		{
-			DoYouWin ();
+		var player = coll.gameObject.GetComponent<Player>();
+		if (player != null) {
+			gameObject.SetActive(false);
+			FindObjectOfType<GM>().SetPoints(FindObjectOfType<GM>().GetPoints() + 5);
 		}
 	}
 
-	void DoYouWin ()
-	{
-		youWinSign.SetActive(true);
-	}
 }
+

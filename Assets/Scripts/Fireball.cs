@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : MonoBehaviour {
+public class Fireball : Weapons {
 
 	public Rigidbody2D rb;
 	public Vector2 velocity;
